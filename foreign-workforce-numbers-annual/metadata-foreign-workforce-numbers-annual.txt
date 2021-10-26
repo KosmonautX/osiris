@@ -1,0 +1,142 @@
+# Metadata for Foreign Workforce Numbers, Annual
+---
+Identifier: '12e2095c-d981-45fb-a6a6-404ce3da01d3'
+Name: 'foreign-workforce-numbers-annual'
+Title: 'Foreign Workforce Numbers, Annual'
+Description:
+  - '* Figures are as of Dec 31 each year.'
+  - '* The figures are updated annually.'
+  - '* Data may not add up to the total due to rounding.'
+  - '* “Other work passes” includes Letter of Consent (LOC), pre-approved LOC, Training
+    Work Permit (TWP) and Training Employment Pass (TEP).'
+Topics:
+  - 'Economy'
+Keywords:
+  - 'Foreign Workers'
+  - 'employment'
+Publisher:
+  Name: 'Ministry of Manpower'
+  Admin 1:
+    Name: 'Toh Wei Wei'
+    Department: 'WPD'
+    Email: 'toh_wei_wei@mom.gov.sg'
+  Admin 2:
+    Name: 'Low Jun Hui'
+    Department: 'WPD'
+    Email: 'low_jun_hui@mom.gov.sg'
+Sources:
+  - 'Ministry of Manpower'
+Source Url: 'https://www.mom.gov.sg/documents-and-publications/foreign-workforce-numbers'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Annual'
+Coverage: '2015-12-01 to 2020-06-30'
+Last Updated: '2020-11-03T03:09:37.258694'
+Resources:
+  -
+    Identifier: 'e049cd9c-9c81-4e43-857c-e5b462b986d3'
+    Title: 'Total Foreign Workforce'
+    Url: 'https://storage.data.gov.sg/foreign-workforce-numbers-annual/resources/total-foreign-workforce-2020-11-03T03-03-06Z.csv'
+    Format: 'CSV'
+    Coverage: '2015-12-01 to 2020-06-30'
+    Last Updated: '2020-11-03T03:03:06.703390'
+    Schema:
+      -
+        Name: 'month'
+        Title: 'Month'
+        Type: 'datetime'
+        Sub Type: 'month'
+        Format: 'YYYY-MM'
+      -
+        Name: 'count'
+        Title: 'Count'
+        Type: 'text'
+        Sub Type: 'general'
+        Description: 'No. of people'
+  -
+    Identifier: '7e472f55-d032-4d26-ba82-73f8b5e527d9'
+    Title: 'Stock of Foreign Workforce by Pass Type'
+    Url: 'https://storage.data.gov.sg/foreign-workforce-numbers-annual/resources/stock-of-foreign-workforce-by-pass-type-2020-11-03T03-04-44Z.csv'
+    Format: 'CSV'
+    Coverage: '2015-12-01 to 2020-06-30'
+    Last Updated: '2020-11-03T03:04:44.165362'
+    Schema:
+      -
+        Name: 'month'
+        Title: 'Month'
+        Type: 'datetime'
+        Sub Type: 'month'
+        Format: 'YYYY-MM'
+      -
+        Name: 'work_pass_type'
+        Title: 'Work pass type'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'count'
+        Title: 'Count'
+        Type: 'text'
+        Sub Type: 'general'
+  -
+    Identifier: 'e5274807-bcc7-4d37-b39f-ab06fec24647'
+    Title: 'Number of Foreign Domestic Workers and Construction, Marine, Process Work
+      Permit Holders'
+    Url: 'https://storage.data.gov.sg/foreign-workforce-numbers-annual/resources/number-of-foreign-domestic-workers-and-construction-marine-process-work-permit-holders-2020-11-03T03-07-17Z.csv'
+    Format: 'CSV'
+    Coverage: '2015-12-01 to 2020-06-30'
+    Last Updated: '2020-11-03T03:07:17.958253'
+    Schema:
+      -
+        Name: 'month'
+        Title: 'Month'
+        Type: 'datetime'
+        Sub Type: 'month'
+        Format: 'YYYY-MM'
+      -
+        Name: 'work_pass_type'
+        Title: 'Work pass type'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'count'
+        Title: 'Count'
+        Type: 'text'
+        Sub Type: 'general'
+  -
+    Identifier: 'db886998-77e6-4f18-871f-d8b9144fb2a1'
+    Title: 'Foreign Workforce Excluding Foreign Domestic Workers'
+    Url: 'https://storage.data.gov.sg/foreign-workforce-numbers-annual/resources/foreign-workforce-excluding-foreign-domestic-workers-2020-11-03T03-08-20Z.csv'
+    Format: 'CSV'
+    Coverage: '2015-12-01 to 2020-06-30'
+    Last Updated: '2020-11-03T03:08:20.782301'
+    Schema:
+      -
+        Name: 'month'
+        Title: 'Month'
+        Type: 'datetime'
+        Sub Type: 'month'
+        Format: 'YYYY-MM'
+      -
+        Name: 'count'
+        Title: 'Count'
+        Type: 'text'
+        Sub Type: 'general'
+  -
+    Identifier: '648bde4d-546b-48a6-bae2-666c93ff82b8'
+    Title: 'Foreign Workforce Excluding Foreign Domestic Workers and Construction,
+      Marine, Process WPH'
+    Url: 'https://storage.data.gov.sg/foreign-workforce-numbers-annual/resources/foreign-workforce-excluding-foreign-domestic-workers-and-construction-marine-process-wph-2020-11-03T03-09-36Z.csv'
+    Format: 'CSV'
+    Coverage: '2015-12-01 to 2020-06-30'
+    Last Updated: '2020-11-03T03:09:36.266118'
+    Schema:
+      -
+        Name: 'month'
+        Title: 'Month'
+        Type: 'datetime'
+        Sub Type: 'month'
+        Format: 'YYYY-MM'
+      -
+        Name: 'count'
+        Title: 'Count'
+        Type: 'text'
+        Sub Type: 'general'

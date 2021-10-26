@@ -1,0 +1,121 @@
+# Metadata for Unit Labour Cost Index (Base Year 2015 = 100), Quarterly
+---
+Identifier: '1e084586-452a-4849-a877-91a6bfa49093'
+Name: 'unit-labour-cost-index-base-year-2015-100-quarterly'
+Title: 'Unit Labour Cost Index (Base Year 2015 = 100), Quarterly'
+Description: 'Unit Labour Cost is defined as the average cost of labour per unit of
+  real output. Total labour cost consists of compensation of employees received by
+  the employee, labour income of the self-employed, other labour-related costs (e.g.
+  Foreign Worker Levy and net training cost) incurred by the employers and wage subsidies
+  (e.g. Wage Credit Scheme and Jobs Credit Scheme) that are provided to the employers.
+  Wage subsides reduce labour costs to the employers and are netted off from total
+  labour cost.'
+Topics:
+  - 'Economy'
+Keywords:
+  - 'ULC'
+  - 'Unit Labour Cost'
+Publisher:
+  Name: 'Ministry of Trade and Industry - Department of Statistics'
+  Admin 1:
+    Name: 'SingStat Info'
+    Department: 'Communications and Information Services'
+    Email: 'info@singstat.gov.sg'
+Sources:
+  - 'Ministry of Trade and Industry - Department of Statistics'
+Source Url: 'http://www.tablebuilder.singstat.gov.sg/publicfacing/createDataTable.action?refId=16082&exportType=csv'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Quarterly'
+Coverage: '1980-01-01 to 2019-06-30'
+Last Updated: '2019-08-19T09:33:29.502916'
+Resources:
+  -
+    Identifier: 'fe32facb-699d-407f-9708-53ea2dc96799'
+    Title: 'Unit Labour Cost Index (Base Year 2015 = 100), Quarterly'
+    Url: 'https://storage.data.gov.sg/unit-labour-cost-index-base-year-2010-100-quarterly/resources/unit-labour-cost-index-base-year-2015-100-quarterly-2019-08-18T03-45-52Z.csv'
+    Format: 'CSV'
+    Coverage: '1980-01-01 to 2019-06-30'
+    Last Updated: '2019-08-18T03:45:52.590085'
+    Schema:
+      -
+        Name: 'quarter'
+        Title: 'Quarter'
+        Type: 'datetime'
+        Sub Type: 'quarter'
+        Format: 'YYYY-[Q]Q'
+      -
+        Name: 'level_1'
+        Title: 'Overall Economy'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'value'
+        Title: 'Value'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'Index'
+  -
+    Identifier: 'e8f73c80-9b12-43e4-bd6b-7c9a51cc288d'
+    Title: 'Unit Labour Cost Index (Base Year 2015 = 100) by Type of Industry, Quarterly'
+    Url: 'https://storage.data.gov.sg/unit-labour-cost-index-base-year-2010-100-quarterly/resources/unit-labour-cost-index-base-year-2015-100-by-type-of-industry-quarterly-2019-08-18T03-45-57Z.csv'
+    Format: 'CSV'
+    Coverage: '1980-01-01 to 2019-06-30'
+    Last Updated: '2019-08-18T03:45:57.795168'
+    Schema:
+      -
+        Name: 'quarter'
+        Title: 'Quarter'
+        Type: 'datetime'
+        Sub Type: 'quarter'
+        Format: 'YYYY-[Q]Q'
+      -
+        Name: 'level_1'
+        Title: 'Overall Economy'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'level_2'
+        Title: 'Goods/Services Producing Industries'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'value'
+        Title: 'Value'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'Index'
+  -
+    Identifier: '186f6e0e-ae33-4844-a439-79e5eed6e03f'
+    Title: 'Unit Labour Cost Index (Base Year 2015 = 100) by Industry, Quarterly'
+    Url: 'https://storage.data.gov.sg/unit-labour-cost-index-base-year-2010-100-quarterly/resources/unit-labour-cost-index-base-year-2015-100-by-industry-quarterly-2019-08-18T03-45-26Z.csv'
+    Format: 'CSV'
+    Coverage: '1980-01-01 to 2019-06-30'
+    Last Updated: '2019-08-18T03:46:04.979459'
+    Schema:
+      -
+        Name: 'quarter'
+        Title: 'Quarter'
+        Type: 'datetime'
+        Sub Type: 'quarter'
+        Format: 'YYYY-[Q]Q'
+      -
+        Name: 'level_1'
+        Title: 'Overall Economy'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'level_2'
+        Title: 'Goods/Services Producing Industries'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'level_3'
+        Title: 'Industry'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'value'
+        Title: 'Value'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'Index'

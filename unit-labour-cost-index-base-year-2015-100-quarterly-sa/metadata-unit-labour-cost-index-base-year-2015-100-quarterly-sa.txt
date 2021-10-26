@@ -1,0 +1,56 @@
+# Metadata for Unit Labour Cost Index (Base Year 2015 = 100), Quarterly, (SA)
+---
+Identifier: '83397296-c7fb-45aa-aa35-58449c107226'
+Name: 'unit-labour-cost-index-base-year-2015-100-quarterly-sa'
+Title: 'Unit Labour Cost Index (Base Year 2015 = 100), Quarterly, (SA)'
+Description: 'Unit Labour Cost is defined as the average cost of labour per unit of
+  real output. Total labour cost consists of compensation of employees received by
+  the employee, labour income of the self-employed, other labour-related costs (e.g.
+  Foreign Worker Levy and net training cost) incurred by the employers and wage subsidies
+  (e.g. Wage Credit Scheme and Jobs Credit Scheme) that are provided to the employers.
+  Wage subsides reduce labour costs to the employers and are netted off from total
+  labour cost.'
+Topics:
+  - 'Economy'
+Keywords:
+  - 'ULC'
+  - 'unit labour cost'
+Publisher:
+  Name: 'Ministry of Trade and Industry - Department of Statistics'
+  Admin 1:
+    Name: 'SingStat Info'
+    Department: 'Communications and Information Services'
+    Email: 'info@singstat.gov.sg'
+Sources:
+  - 'Ministry of Trade and Industry - Department of Statistics'
+Source Url: 'http://www.tablebuilder.singstat.gov.sg/publicfacing/createDataTable.action?refId=16083&exportType=csv'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Quarterly'
+Coverage: '1980-01-01 to 2019-12-31'
+Last Updated: '2021-01-12T01:54:37.546143'
+Resources:
+  -
+    Identifier: '4c90bf70-17d8-404f-a0e0-00adc93f6f42'
+    Title: 'Unit Labour Cost Index (Base Year 2015 = 100), Quarterly, (SA)'
+    Url: 'https://storage.data.gov.sg/unit-labour-cost-index-base-year-2015-100-quarterly-sa/resources/unit-labour-cost-index-base-year-2015-100-quarterly-sa-2020-04-12T14-55-00Z.csv'
+    Format: 'CSV'
+    Coverage: '1980-01-01 to 2019-12-31'
+    Last Updated: '2020-04-12T14:55:00.322973'
+    Schema:
+      -
+        Name: 'quarter'
+        Title: 'Quarter'
+        Type: 'datetime'
+        Sub Type: 'quarter'
+        Format: 'YYYY-[Q]Q'
+      -
+        Name: 'level_1'
+        Title: 'Overall Economy'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'value'
+        Title: 'Value'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'Index'
