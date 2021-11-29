@@ -108,7 +108,7 @@ def endtoend(target, cols, raw, sector):
         if counter >= early_stopping_rounds:
             break
 
-        if (e%10 == 0):
+        if (e%20 == 0):
             preds = preds*(y_train_max - y_train_min) + y_train_min
             true = true*(y_train_max - y_train_min) + y_train_min
             mse = mean_squared_error(true, preds)
@@ -139,14 +139,16 @@ def endtoend(target, cols, raw, sector):
     true = np.concatenate(true)
     preds = np.concatenate(preds)
 
-    raw.loc[len(raw)-len(preds):len(raw), 'pred'] = preds*(y_test_max-y_test_min+ 1e-9) + y_test_min
-    raw.loc[len(raw)-len(preds):len(raw), 'test'] = true*(y_test_max-y_test_min+ 1e-9) + y_test_min
+    raw.loc[len(raw)-len(preds)+1:len(raw)+ 1, 'pred'] = (preds*(y_test_max-y_test_min+ 1e-9) + y_test_min)[:-1]
+    raw.loc[len(raw)-len(preds)+1:len(raw)+ 1, 'test'] = (true*(y_test_max-y_test_min+ 1e-9) + y_test_min)[:-1]
+    raw.loc[len(raw)-len(preds)+1, 'pred'] = raw.loc[len(raw)-len(preds)+1, 'total'] # connecting to first validation  value
     plt.style.use('dark_background')
     plt.plot(raw['bolu'],color="red", label='Upper Bollinger Band')
     plt.plot(raw['bold'],color="yellow", label='Lower Bollinger Band')
-    plt.plot(raw['total'], label='True Validation Data')
+    plt.plot(raw['test'], label='True Validation Data')
+    plt.plot(raw['total'].head(len(raw)-len(preds)+2), label='Training Data')
     plt.plot(raw['pred'],color="blue", label='Predicted Birth Rates')
-    plt.title("live birth vs " + sector )
+    plt.title("live birth trained on " + sector )
     plt.xlabel("Validation Timesteps")
     plt.ylabel("Total Live Births")
     plt.legend(loc="upper right")
@@ -156,7 +158,7 @@ def endtoend(target, cols, raw, sector):
     mse = mean_squared_error(true, preds)
     mae = mean_absolute_error(true, preds)
     #classification_report(true,preds)
-    print(mse, mae)
+    print("Mean Square Error:", mse, "| Mean Absolute Error:", mae)
 
 
 def relative(data):
