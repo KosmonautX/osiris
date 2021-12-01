@@ -18,9 +18,9 @@ def endtoend(target, cols, raw, sector):
     raw['bold'] = raw['mean'] - 2*raw['sd']
 
     #--------------------------------------------------------------INITIAL CELL---------------------------------------
-    train_length = int(0.8*len(raw))
+    train_length = int(0.75*len(raw))
     depth = 4
-    batch_size = 64
+    batch_size = 8
     prediction_horizon = 1
 
     train = raw.iloc[:train_length, :]
@@ -58,7 +58,7 @@ def endtoend(target, cols, raw, sector):
     opt = torch.optim.Adam(model.parameters(), lr=0.002)
     sc = torch.optim.lr_scheduler.StepLR(opt, 10, 0.9)
     loss = nn.MSELoss()
-    early_stopping_rounds=44
+    early_stopping_rounds=120
     vl = 99999
     counter = 0
     for e in range(300):
@@ -142,6 +142,7 @@ def endtoend(target, cols, raw, sector):
     raw.loc[len(raw)-len(preds)+1:len(raw)+ 1, 'pred'] = (preds*(y_test_max-y_test_min+ 1e-9) + y_test_min)[:-1]
     raw.loc[len(raw)-len(preds)+1:len(raw)+ 1, 'test'] = (true*(y_test_max-y_test_min+ 1e-9) + y_test_min)[:-1]
     raw.loc[len(raw)-len(preds), 'pred'] = raw.loc[len(raw)-len(preds), 'total'] # connecting to last training value
+    raw.loc[len(raw)-len(preds), 'test'] = raw.loc[len(raw)-len(preds), 'total'] # connecting to last training value
     plt.style.use('dark_background')
     plt.plot(raw['bolu'],color="red", label='Upper Bollinger Band')
     plt.plot(raw['bold'],color="yellow", label='Lower Bollinger Band')
