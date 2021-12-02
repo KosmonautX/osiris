@@ -8,7 +8,7 @@ import torch.nn as nn
 from torch.nn.utils import weight_norm
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 
-def endtoend(target, cols, raw, sector, depth=4, batch_size = 8, patience =120):
+def endtoend(target, cols, raw, sector, depth=4, batch_size = 8, patience =120,learner=0.002):
     #--------------------------------------------------------------BOLLINGER BAND---------------------------------------
     raw.groupby([pd.Grouper(key="time", freq="Y")])[target].sum()
     raw["total"] = raw[target]
@@ -19,8 +19,6 @@ def endtoend(target, cols, raw, sector, depth=4, batch_size = 8, patience =120):
 
     #--------------------------------------------------------------INITIAL CELL---------------------------------------
     train_length = int(0.75*len(raw))
-    depth = 4
-    batch_size = 8
     prediction_horizon = 1
 
     train = raw.iloc[:train_length, :]
@@ -55,7 +53,7 @@ def endtoend(target, cols, raw, sector, depth=4, batch_size = 8, patience =120):
 
     #-----------------------------------------------------------TRAINING----------------------------------------------
     model = TCN(X_train.shape[2], 5).cuda()
-    opt = torch.optim.Adam(model.parameters(), lr=0.002)
+    opt = torch.optim.Adam(model.parameters(), lr=learner)
     sc = torch.optim.lr_scheduler.StepLR(opt, 10, 0.9)
     loss = nn.MSELoss()
     early_stopping_rounds= patience
